@@ -21,6 +21,8 @@ public class RestUtils {
 	//xcelsheet path
 	public static ResourceBundle path = ResourceBundle.getBundle("path");
 	public static XLUtils xlutils=new XLUtils(path.getString("Xlpath"));
+	
+	
 	//payload objects
 		public static UserLoginPOJO UserLoginPOJO = new UserLoginPOJO();
 		

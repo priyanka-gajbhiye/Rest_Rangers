@@ -43,9 +43,7 @@ public class XLUtils {
 	{
 		fi=new FileInputStream(path);
 		workbook=new XSSFWorkbook(fi);
-		System.out.println("DATAexcel sheet" + workbook );
 		sheet=workbook.getSheet(sheetName);
-		System.out.println("DATAexcel sheet" + sheet );
 		row=sheet.getRow(rownum);
 		cell=row.getCell(colnum);
 

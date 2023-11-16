@@ -15,21 +15,22 @@ import io.cucumber.java.en.When;
 
 public class UserLoginSD extends RestUtils{
 	
-	@Given("User creates request for login")
-	public void user_creates_request_for_login() throws IOException {
+	@Given("User creates POST request for login")
+	public void User_creates_POST_request_for_login() throws IOException {
 
 		String BaseURI = url_endpoints.getString("BaseUrl");
 		baseURI = BaseURI;
-
 		log.info("***User sends request with BaseURL***");	
 	}
 
 
 	@When("User sends HTTPS request and request body with mandatory additional fields")
 	public void user_sends_HTTPS_request_and_request_body_with_mandatory_additional_fields() throws IOException {
-		UserLoginRequest.PostRequest(UserLoginBody.PostBody());
+		
+				UserLoginRequest.PostRequest(UserLoginBody.PostBody());
 		UserLoginPOJO.setToken(response.path("token"));
-		log.info("****New program is created with non-existing fields****");
+		System.out.println("Bearer Token"+ UserLoginPOJO.getToken());
+		log.info("****New user login is created with Bearer Token****");
 
 	}
 
