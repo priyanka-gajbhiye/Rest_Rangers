@@ -5,9 +5,10 @@ public class UserLoginPOJO {
 	String password;
 	String userLoginEmail;
 	String token;
-	
+	String Bearer;
 	public String getToken() {
-		return token;
+		Bearer  = "Bearer "+token;
+		return Bearer;
 	}
 	public void setToken(String token) {
 		this.token = token;

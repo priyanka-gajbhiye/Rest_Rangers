@@ -1,5 +1,6 @@
 package api.utilities;
 
+import java.io.File;
 import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
@@ -25,6 +26,12 @@ public class RestUtils {
 	
 	//payload objects
 		public static UserLoginPOJO UserLoginPOJO = new UserLoginPOJO();
+	
+	//User Login schema path
+		public static File userLoginjson = xlutils.getJSONFile(path.getString("userLoginSchemajson"));
+		
+		public static File morbidityControllerjson = xlutils.getJSONFile(path.getString("morbiditycontrollerSchemajson"));
+		
 		
 
 

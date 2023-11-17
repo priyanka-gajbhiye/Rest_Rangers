@@ -29,33 +29,29 @@ public class UserLoginSD extends RestUtils{
 		
 				UserLoginRequest.PostRequest(UserLoginBody.PostBody());
 		UserLoginPOJO.setToken(response.path("token"));
-		System.out.println("Bearer Token"+ UserLoginPOJO.getToken());
+
 		log.info("****New user login is created with Bearer Token****");
 
 	}
 
 	@Then("User receives {int} created status with token in response body")
-	public void user_receives_created_status_with_token_in_response_body(Integer int1) {
+	public void user_receives_created_status_with_token_in_response_body(Integer statuscode ) {
 	 
-//		if (statuscode == 200) {
-//
-//			response.then().assertThat()
-//			.statusCode(statuscode)
-//			.body(matchesJsonSchema(programPutjson))
-//			.log().all();
-//
-//			assertEquals(ProgramPayload.getProgramName(), response.jsonPath().getString("programName"));
-//			assertEquals(ProgramPayload.getProgramStatus(), response.jsonPath().getString("programStatus"));
-//			assertEquals(ProgramPayload.getProgramDescription(), response.jsonPath().getString("programDescription"));
-//
-//			log.info("Program updated successfully with status code " + response.getStatusCode()) ;
-//			log.info("Program Respose body" +response.getBody().asString());
-//
-//
-//		} else {
-//			log.info("Request failed");
-//			log.error("400 bad Request");
-//		}
+	if (statuscode == 200) {
+
+		response.then().assertThat()
+		.statusCode(statuscode)
+		.body(matchesJsonSchema(userLoginjson))
+		.log().all();
+		
+			log.info("User Login created successfully with status code " + response.getStatusCode()) ;
+			log.info("User Login Response body" +response.getBody().asString());
+
+
+		} else {
+		log.info("Request failed");
+			log.error("400 bad Request");
+		}
 	}
 	
 
