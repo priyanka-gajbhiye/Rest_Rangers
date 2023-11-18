@@ -27,8 +27,9 @@ public class UserLoginSD extends RestUtils{
 	@When("User sends HTTPS request and request body with mandatory additional fields")
 	public void user_sends_HTTPS_request_and_request_body_with_mandatory_additional_fields() throws IOException {
 		
-				UserLoginRequest.PostRequest(UserLoginBody.PostBody());
+		UserLoginRequest.PostRequest(UserLoginBody.PostBody());
 		UserLoginPOJO.setToken(response.path("token"));
+		System.out.println("Login Token"+ UserLoginPOJO.getToken());
 
 		log.info("****New user login is created with Bearer Token****");
 
