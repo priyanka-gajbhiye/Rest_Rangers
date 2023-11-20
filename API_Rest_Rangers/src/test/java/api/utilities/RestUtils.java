@@ -23,6 +23,10 @@ public class RestUtils {
 	public static ResourceBundle path = ResourceBundle.getBundle("path");
 	public static XLUtils xlutils=new XLUtils(path.getString("Xlpath"));
 	
+	//Patient new and update
+	public static ResourceBundle newPatient = ResourceBundle.getBundle("newPatient");
+	public static ResourceBundle updatePatient = ResourceBundle.getBundle("updatePatient");
+	
 	
 	//payload objects
 		public static UserLoginPOJO UserLoginPOJO = new UserLoginPOJO();
@@ -31,6 +35,9 @@ public class RestUtils {
 		public static File userLoginjson = xlutils.getJSONFile(path.getString("userLoginSchemajson"));
 		
 		public static File morbidityControllerjson = xlutils.getJSONFile(path.getString("morbiditycontrollerSchemajson"));
+		
+	// Patient schema path
+		public static File Patientjson = xlutils.getJSONFile(path.getString("PatientSchemajson"));
 		
 		
 

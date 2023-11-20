@@ -5,7 +5,6 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 
 import java.io.IOException;
 
-import api.CRUDrequest.NegativeUserLoginRequest;
 import api.CRUDrequest.UserLoginRequest;
 import api.requestbodyActions.NegativeUserLoginBody;
 import api.requestbodyActions.UserLoginBody;
@@ -27,7 +26,7 @@ public class NegativeUserLoginSD extends RestUtils {
 	@When("User sends HTTPS request with request body with invalid URL")
 	public void user_sends_HTTPS_request_with_request_body_with_invalid_URL() throws IOException {
 	
-		NegativeUserLoginRequest.PostRequestInvalidEndPoint(NegativeUserLoginBody.PostBodyInvalidURL());
+		UserLoginRequest.PostRequestInvalidEndPoint(NegativeUserLoginBody.PostBodyInvalidURL());
 		//UserLoginPOJO.setToken(response.path("token"));
 
 		log.info("****New user login is Not created ****");

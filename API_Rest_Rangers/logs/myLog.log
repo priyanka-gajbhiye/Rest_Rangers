@@ -1,0 +1,48 @@
+[INFO ]2023-11-20 16:33:58.618 [main]RestUtils-***User sends request with BaseURL***
+[INFO ]2023-11-20 16:34:00.723 [main]RestUtils-****New user login is Not created ****
+[INFO ]2023-11-20 16:34:00.752 [main]RestUtils-User Login is not created 404
+[INFO ]2023-11-20 16:34:00.830 [main]RestUtils-***User sends request with BaseURL***
+[INFO ]2023-11-20 16:34:00.836 [main]RestUtils-User Login is not created 404
+[INFO ]2023-11-20 16:34:00.847 [main]RestUtils-***User sends request with BaseURL***
+[INFO ]2023-11-20 16:34:01.133 [main]RestUtils-****New user login is Not created ****
+[INFO ]2023-11-20 16:34:01.137 [main]RestUtils-User Login is not created 401
+[INFO ]2023-11-20 16:34:01.148 [main]RestUtils-***User sends request with BaseURL***
+[INFO ]2023-11-20 16:34:01.950 [main]RestUtils-****New user login is created with Bearer Token****
+[INFO ]2023-11-20 16:34:02.135 [main]RestUtils-User Login created successfully with status code 200
+[INFO ]2023-11-20 16:34:02.136 [main]RestUtils-User Login Response body{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwcml5YW5rYWdhamJoaXllMTEwNDE1QGdtYWlsLmNvbSIsImlhdCI6MTcwMDUxNjA0MSwiZXhwIjoxNzAwNTQ0ODQxfQ.mJhmpZbGDDBZ3HeIRVt0cxlZCZuKY33nz1YTq1U-UR_Z9Hyef4Tla2MFespDYmjDATjcOGH7tJTqF6ONp058xg","type":"Bearer ","userId":75,"loginUserEmail":"priyankagajbhiye110415@gmail.com","roles":["ROLE_DIETICIAN"]}
+[INFO ]2023-11-20 16:34:02.152 [main]RestUtils-***Get request for all Morbidities***
+[INFO ]2023-11-20 16:34:02.371 [main]RestUtils-Get All Morbidity successful with status code 200
+[INFO ]2023-11-20 16:34:02.372 [main]RestUtils-Get All Morbidity Response body[{"morbidityId":1,"morbidityTestId":"DIA_FG","morbidityNameRegex":"(?i)(.*)fasting(.*)[sugarglucose](.*)|(.*)glucose(.*)fasting(.*)","morbidityTestName":"Fasting Glucose","morbidityTestUnit":"mg/dL","morbidityMarkerMinVal":100.0,"morbidityMarkerMaxVal":125.0},{"morbidityId":2,"morbidityTestId":"DIA_AG","morbidityNameRegex":"(?i)(.*)average(.*)glucose(.*)","morbidityTestName":"Average Glucose","morbidityTestUnit":"mg/dL","morbidityMarkerMinVal":121.0,"morbidityMarkerMaxVal":150.0},{"morbidityId":3,"morbidityTestId":"DIA_PG","morbidityNameRegex":"(?i)(.*)plasma(.*)glucose(.*)","morbidityTestName":"Plasma Glucose","morbidityTestUnit":"mg/dL","morbidityMarkerMinVal":140.0,"morbidityMarkerMaxVal":199.0},{"morbidityId":4,"morbidityTestId":"DIA_HBA1C","morbidityNameRegex":"(.*)HbA[1I]c(.*)|(.*)H(.*)P(.*)L(.*)C(.*)","morbidityTestName":"HbA1c","morbidityTestUnit":"%","morbidityMarkerMinVal":5.7,"morbidityMarkerMaxVal":6.5},{"morbidityId":5,"morbidityTestId":"THYRO_TSH","morbidityNameRegex":"(?i)(.*)T(.*)S(.*)H(.*)|(.*)THYROID STIMULATING HORMONE(.*)","morbidityTestName":"TSH","morbidityTestUnit":"μIU/ml","morbidityMarkerMinVal":0.55,"morbidityMarkerMaxVal":4.78},{"morbidityId":6,"morbidityTestId":"THYRO_TSH_1","morbidityNameRegex":"(?i)(.*)T(.*)S(.*)H(.*)|(.*)THYROID STIMULATING HORMONE(.*)","morbidityTestName":"TSH","morbidityTestUnit":"uIU/ml","morbidityMarkerMinVal":0.55,"morbidityMarkerMaxVal":4.78},{"morbidityId":7,"morbidityTestId":"THYRO_T3","morbidityNameRegex":"(?i)(.*)T3(.*)","morbidityTestName":"T3","morbidityTestUnit":"ng/dL","morbidityMarkerMinVal":60.0,"morbidityMarkerMaxVal":180.0},{"morbidityId":8,"morbidityTestId":"THYRO_T3_1","morbidityNameRegex":"(?i)(.*)T3(.*)","morbidityTestName":"T3","morbidityTestUnit":"ng/mL","morbidityMarkerMinVal":0.6,"morbidityMarkerMaxVal":1.8},{"morbidityId":9,"morbidityTestId":"THYRO_T3_2","morbidityNameRegex":"(?i)(.*)T3(.*)","morbidityTestName":"T3","morbidityTestUnit":"pg/mL","morbidityMarkerMinVal":1.5,"morbidityMarkerMaxVal":4.1},{"morbidityId":10,"morbidityTestId":"THYRO_T3_3","morbidityNameRegex":"(?i)(.*)T3(.*)","morbidityTestName":"T3","morbidityTestUnit":"nmol/L","morbidityMarkerMinVal":0.9,"morbidityMarkerMaxVal":2.76},{"morbidityId":11,"morbidityTestId":"THYRO_T4","morbidityNameRegex":"(?i)(.*)T4(.*)","morbidityTestName":"T4","morbidityTestUnit":"μg/dL","morbidityMarkerMinVal":5.0,"morbidityMarkerMaxVal":12.0},{"morbidityId":12,"morbidityTestId":"THYRO_T4_1","morbidityNameRegex":"(?i)(.*)T4(.*)","morbidityTestName":"T4","morbidityTestUnit":"ug/dL","morbidityMarkerMinVal":5.0,"morbidityMarkerMaxVal":12.0},{"morbidityId":13,"morbidityTestId":"THYRO_T4_2","morbidityNameRegex":"(?i)(.*)T4(.*)","morbidityTestName":"T4","morbidityTestUnit":"ng/dL","morbidityMarkerMinVal":0.8,"morbidityMarkerMaxVal":1.9},{"morbidityId":14,"morbidityTestId":"BP_LEVEL","morbidityNameRegex":"(?i)(.*)Blood(.*)Pressure(.*)","morbidityTestName":"Blood Pressure Levels","morbidityTestUnit":"mm Hg","morbidityMarkerMinVal":80.0,"morbidityMarkerMaxVal":130.0},{"morbidityId":15,"morbidityTestId":"THYRO_TSH_2","morbidityNameRegex":"(?i)(.*)T(.*)S(.*)H(.*)|(.*)THYROID STIMULATING HORMONE(.*)","morbidityTestName":"TSH","morbidityTestUnit":"mIU/L","morbidityMarkerMinVal":0.45,"morbidityMarkerMaxVal":4.12}]
+[INFO ]2023-11-20 16:34:02.385 [main]RestUtils-***Get Resquest by Morbidity Name***
+[INFO ]2023-11-20 16:34:02.561 [main]RestUtils-Get Morbidity by Name successful with status code 200
+[INFO ]2023-11-20 16:34:02.561 [main]RestUtils-Get Morbidity by Name Response body[{"morbidityId":5,"morbidityTestId":"THYRO_TSH","morbidityNameRegex":"(?i)(.*)T(.*)S(.*)H(.*)|(.*)THYROID STIMULATING HORMONE(.*)","morbidityTestName":"TSH","morbidityTestUnit":"μIU/ml","morbidityMarkerMinVal":0.55,"morbidityMarkerMaxVal":4.78},{"morbidityId":6,"morbidityTestId":"THYRO_TSH_1","morbidityNameRegex":"(?i)(.*)T(.*)S(.*)H(.*)|(.*)THYROID STIMULATING HORMONE(.*)","morbidityTestName":"TSH","morbidityTestUnit":"uIU/ml","morbidityMarkerMinVal":0.55,"morbidityMarkerMaxVal":4.78},{"morbidityId":15,"morbidityTestId":"THYRO_TSH_2","morbidityNameRegex":"(?i)(.*)T(.*)S(.*)H(.*)|(.*)THYROID STIMULATING HORMONE(.*)","morbidityTestName":"TSH","morbidityTestUnit":"mIU/L","morbidityMarkerMinVal":0.45,"morbidityMarkerMaxVal":4.12}]
+[INFO ]2023-11-20 16:34:02.573 [main]RestUtils-***Get request for all Morbidities Without token***
+[INFO ]2023-11-20 16:34:02.748 [main]RestUtils-User Login is not created 401
+[INFO ]2023-11-20 16:34:02.760 [main]RestUtils-***Get request for all Morbidity Name Without token***
+[INFO ]2023-11-20 16:34:02.921 [main]RestUtils-User Login is not created 401
+[INFO ]2023-11-20 16:34:02.933 [main]RestUtils-***GET request by partial morbidity Name***
+[INFO ]2023-11-20 16:34:03.138 [main]RestUtils-***Get request by invalid morbidity Name***
+[INFO ]2023-11-20 16:34:03.314 [main]RestUtils-User Login is not created 404
+[INFO ]2023-11-20 16:34:03.323 [main]RestUtils-***User  sends POST request for New Patient***
+[INFO ]2023-11-20 16:34:03.649 [main]RestUtils-New Patient created successfully with status code 201
+[INFO ]2023-11-20 16:34:03.649 [main]RestUtils-New Patient Response body{"patientId":4625,"FirstName":"John","LastName":"Dough","ContactNumber":"9555526655","Email":"testpatientInfo@test.com","Allergy":"patientInfoAllergyEdit","FoodCategory":"EGGETARIAN","DateOfBirth":"2010-01-01T00:00:00.000+00:00","DieticianId":75}
+[INFO ]2023-11-20 16:34:03.660 [main]RestUtils-***User sends PUT request for update Patient***
+[INFO ]2023-11-20 16:34:03.868 [main]RestUtils-Patient updated successfully with status code 200
+[INFO ]2023-11-20 16:34:03.868 [main]RestUtils-Patient updated Response body{"patientId":4625,"FirstName":"Mike","LastName":"Dough","ContactNumber":"9555526655","Email":"testpatientInfo@test.com","Allergy":"patientInfoAllergyEdit","FoodCategory":"EGGETARIAN","DateOfBirth":"2010-01-01T00:00:00.000+00:00","DieticianId":75}
+[INFO ]2023-11-20 16:34:03.885 [main]RestUtils-***User creates POST request with duplicate data***
+[INFO ]2023-11-20 16:34:04.069 [main]RestUtils-New Patient created successfully with status code 400
+[INFO ]2023-11-20 16:34:04.081 [main]RestUtils-***Delete request for Patient with Invalid Endpoint***
+[INFO ]2023-11-20 16:34:04.303 [main]RestUtils- Patient Delete Unsuccessfull with status code 404
+[INFO ]2023-11-20 16:34:04.311 [main]RestUtils-***Delete request for Patient with Invalid patientID***
+[INFO ]2023-11-20 16:34:04.481 [main]RestUtils- Patient Delete Unsuccessful with status code 404
+[INFO ]2023-11-20 16:34:04.500 [main]RestUtils-***Delete Patient without token***
+[INFO ]2023-11-20 16:34:04.658 [main]RestUtils- Patient Delete Unsuccessful with status code 401
+[INFO ]2023-11-20 16:34:04.668 [main]RestUtils-***Delete request for Patient***
+[INFO ]2023-11-20 16:34:04.842 [main]RestUtils- Patient Deleted successfully with status code 200
+[INFO ]2023-11-20 16:34:04.854 [main]RestUtils-***Get request for logout Invalid Endpoint***
+[INFO ]2023-11-20 16:34:05.014 [main]RestUtils-Request failed
+[INFO ]2023-11-20 16:34:05.027 [main]RestUtils-***Get request for for logout without token***
+[INFO ]2023-11-20 16:34:05.191 [main]RestUtils-User Login is not created 401
+[INFO ]2023-11-20 16:34:05.199 [main]RestUtils-***Get request for for logout valid Endpoint***
+[INFO ]2023-11-20 16:34:05.384 [main]RestUtils-User Login created successfully with status code 200
+[INFO ]2023-11-20 16:34:05.384 [main]RestUtils-User Login Response bodyLogout successful

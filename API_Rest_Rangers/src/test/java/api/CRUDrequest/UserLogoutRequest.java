@@ -27,5 +27,45 @@ public class UserLogoutRequest extends RestUtils {
 
 		return response;
 	}
+	public static Response getLogOutInvalidEndpoint() {		
+
+		try {
+			
+			RequestSpecification request = RestAssured.given();
+			request.header("Authorization", UserLoginPOJO.getToken());
+			
+			request.then().log().all();
+			
+			response = request.when().get(url_endpoints.getString("InvalidgetUserLogout"));
+			
+			response.then().log().all();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return response;
+	}
+	
+	public static Response getLogOutWithoutToken() {		
+
+		try {
+			
+			RequestSpecification request = RestAssured.given();
+			
+			request.then().log().all();
+			
+			response = request.when().get(url_endpoints.getString("getLogout"));
+			
+			response.then().log().all();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return response;
+	}
+
+
 
 }

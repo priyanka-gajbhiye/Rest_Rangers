@@ -1,6 +1,6 @@
 package api.StepDefinition;
 
-import api.CRUDrequest.NegativeUserLogoutRequest;
+import api.CRUDrequest.UserLogoutRequest;
 import api.utilities.RestUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,13 +9,13 @@ import io.cucumber.java.en.When;
 public class NegativeUserLogoutSD extends RestUtils{
 	@Given("User creates GET request for logout with Invalid Endpoint")
 	public void user_creates_GET_request_for_logout_with_Invalid_Endpoint() {
-		log.info("***Get request for for logout Invalid Endpoint***");
+		log.info("***Get request for logout Invalid Endpoint***");
 		
 	}
 
 	@When("User sends HTTPS request with Invalid Endpoint")
 	public void user_sends_HTTPS_request_with_Invalid_Endpoint() {
-		NegativeUserLogoutRequest.getLogOutInvalidEndpoint();
+		UserLogoutRequest.getLogOutInvalidEndpoint();
 	}
 
 	@Then("User receives {int} statuscode with Method Not Allowed")
@@ -36,13 +36,13 @@ public class NegativeUserLogoutSD extends RestUtils{
 
 	@Given("User creates GET request for logout without token")
 	public void user_creates_GET_request_for_logout_without_token() {
-		log.info("***Get request for for logout Invalid Endpoint***");
+		log.info("***Get request for for logout without token***");
 		
 	}
 
 	@When("User sends HTTPS request without token")
 	public void user_sends_HTTPS_request_without_token() {
-		NegativeUserLogoutRequest.getLogOutWithoutToken();
+		UserLogoutRequest.getLogOutWithoutToken();
 	}
 
 	@Then("User receives {int} statuscode for without token")

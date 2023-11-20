@@ -13,7 +13,7 @@ public class UserLogoutSD extends RestUtils {
 
 @Given("User creates GET request for logout with token and valid endpoint")
 public void user_creates_GET_request_for_logout_with_token_and_valid_endpoint() {
-	log.info("***Get request for for logout Invalid Endpoint***");
+	log.info("***Get request for for logout valid Endpoint***");
 	
 }
 

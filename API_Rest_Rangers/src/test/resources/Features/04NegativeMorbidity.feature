@@ -13,7 +13,7 @@ Feature: Negative Scenario Morbidity Check
   Scenario: Get morbidity condition by partial morbidity Name
     Given User creates GET request by partial morbidity Name
     When User sends HTTPS request by partial morbidity Name
-    Then User receives 200 Not Found status code by partial morbidity Name
+    Then User receives 404 Not Found status code by partial morbidity Name
 
   Scenario: Get morbidity condition by invalid morbidity name
     Given User creates GET request by invalid morbidity Name

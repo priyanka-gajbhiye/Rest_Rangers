@@ -1,6 +1,6 @@
 package api.StepDefinition;
 
-import api.CRUDrequest.NegativeMorbidityControllerRequest;
+import api.CRUDrequest.MorbidityControllerRequst;
 import api.utilities.RestUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,7 +15,7 @@ public class NegativeMorbiditySD extends RestUtils{
 
 	@When("User sends HTTPS request for all morbidty")
 	public void user_sends_HTTPS_request_for_all_morbidty() {
-	   NegativeMorbidityControllerRequest.GetAllMorWithoutTokenRequest();
+		MorbidityControllerRequst.GetAllMorWithoutTokenRequest();
 	}
 
 	@Then("User receives {int} unauthorized status code for all morbidty")
@@ -41,7 +41,7 @@ public class NegativeMorbiditySD extends RestUtils{
 
 	@When("User sends HTTPS request for morbidity Name")
 	public void user_sends_HTTPS_request_for_morbidity_Name() {
-		NegativeMorbidityControllerRequest.GetMorbidityNameWithoutTokenRequest();
+		MorbidityControllerRequst.GetMorbidityNameWithoutTokenRequest();
 	}
 
 	@Then("User receives {int} unauthorized status code for morbidity Name")
@@ -62,13 +62,13 @@ public class NegativeMorbiditySD extends RestUtils{
 
 	@Given("User creates GET request by partial morbidity Name")
 	public void user_creates_GET_request_by_partial_morbidity_Name() {
-		log.info("***Get request for all Morbidity Name Without token***");
+		log.info("***GET request by partial morbidity Name***");
 	
 	}
 
 	@When("User sends HTTPS request by partial morbidity Name")
 	public void user_sends_HTTPS_request_by_partial_morbidity_Name() {
-		NegativeMorbidityControllerRequest.GetMorbidityPartialNameRequest();
+		MorbidityControllerRequst.GetMorbidityPartialNameRequest();
 	}
 
 	@Then("User receives {int} Not Found status code by partial morbidity Name")
@@ -90,13 +90,13 @@ public class NegativeMorbiditySD extends RestUtils{
 
 	@Given("User creates GET request by invalid morbidity Name")
 	public void user_creates_GET_request_by_invalid_morbidity_Name() {
-		log.info("***Get request for all Morbidity Name Without token***");
+		log.info("***Get request by invalid morbidity Name***");
 	
 	}
 
 	@When("User sends HTTPS request by invalid morbidity Name")
 	public void user_sends_HTTPS_request_by_invalid_morbidity_Name() {
-		NegativeMorbidityControllerRequest.GetMorbidityInvalidNameRequest();
+		MorbidityControllerRequst.GetMorbidityInvalidNameRequest();
 	}
 
 	@Then("User receives {int} Not Found status code by invalid morbidity name")

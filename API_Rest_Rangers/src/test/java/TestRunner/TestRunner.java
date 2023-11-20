@@ -15,11 +15,10 @@ import io.cucumber.junit.CucumberOptions;
 glue = {"api.StepDefinition"}, 
 
 monochrome = true, 
-plugin = {"pretty",
+plugin = {"pretty","json:target/cucumber-reports/Cucumber.json",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm",
-		"html:target/Cucumber.html",
-		"json:target/cucumber.json",
+		"html:target/Cucumber",
 		"junit:target/JUNITReports/reports.xml"})
 
 public class TestRunner {
