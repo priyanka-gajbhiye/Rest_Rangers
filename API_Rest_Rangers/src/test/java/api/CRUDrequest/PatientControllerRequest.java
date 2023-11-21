@@ -144,7 +144,7 @@ public class PatientControllerRequest extends RestUtils{
 			
 			request.then().log().all();
 			
-			response = request.when().delete(url_endpoints.getString("postpatientcontroller")+"/"+UserLoginPOJO.getPatientId()).andReturn();
+			response = request.when().delete(url_endpoints.getString("patientcontroller")+"/"+UserLoginPOJO.getPatientId()).andReturn();
 			
 			response.then().log().all();
 			
@@ -207,7 +207,7 @@ public static Response DeleteRequestWithoutToken() {
 		
 		request.then().log().all();
 		
-		response = request.when().delete(url_endpoints.getString("postpatientcontroller")).andReturn();
+		response = request.when().delete(url_endpoints.getString("patientcontroller")).andReturn();
 		
 		response.then().log().all();
 		

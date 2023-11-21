@@ -4,6 +4,8 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 
 import java.io.IOException;
 
+import org.json.JSONObject;
+
 import api.CRUDrequest.PatientControllerRequest;
 
 import api.utilities.RestUtils;
@@ -56,9 +58,12 @@ public class PatientControllerSD extends RestUtils{
 	public void user_sends_HTTPS_request_for_New_Patient() throws IOException {
 		PatientControllerRequest.PostRequest();
 		UserLoginPOJO.setPatientId(response.path("patientId"));
+		String FileMorbidity = response.path("FileMorbidity").toString();
+		String FileMorbidityKey=FileMorbidity.substring(FileMorbidity.indexOf("{")+1, FileMorbidity.indexOf("="));
 		
-		System.out.println("New PatientID"+UserLoginPOJO.getPatientId());
-		//System.out.println("New FileID"+UserLoginPOJO.getFileId());
+		log.info("New PatientID"+UserLoginPOJO.getPatientId());
+		log.info("New FileID"+FileMorbidityKey);
+		UserLoginPOJO.setFileId(FileMorbidityKey);
 		
 	}
 
@@ -123,7 +128,8 @@ public void user_creates_GET_request_for_patient_morbidity_by_patientID() {
 @When("user sends request for patient morbidity and request body by patient ID")
 public void user_sends_request_for_patient_morbidity_and_request_body_by_patient_ID() {
 	PatientControllerRequest.GetRequest();
-	UserLoginPOJO.setFileId(response.path("fileId"));
+	
+	//UserLoginPOJO.setFileId(response.path("fileId").toString());
 	
 }
 
