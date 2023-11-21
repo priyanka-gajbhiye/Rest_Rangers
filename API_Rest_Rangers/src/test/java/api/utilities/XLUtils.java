@@ -37,6 +37,12 @@ public class XLUtils {
 
 		return jsonFile;
 	}
+	
+	public File getReportFile (String PDFpath)
+	{
+		File pdfReportfile = new File(PDFpath);
+		return pdfReportfile;
+	}
 
 
 	public String getCellData(String sheetName,int rownum,int colnum) throws IOException

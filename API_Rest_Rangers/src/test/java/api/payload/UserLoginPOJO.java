@@ -2,15 +2,25 @@ package api.payload;
 
 public class UserLoginPOJO {
 	
-	
+	String fileId;
+	String fileName;
 	String password;
 	String userLoginEmail;
 	String token;
 	String Bearer;
 	int patientId;
 	String patientInfo;
-	
-	
+    String patientRoleEmail;
+	String patientpassword;
+	String patinetEmail;
+	String patienttoken;
+	public String getPatienttoken() {
+		Bearer="Bearer"+patienttoken;
+		return patienttoken;
+	}
+	public void setPatienttoken(String patienttoken) {
+		this.patienttoken = patienttoken;
+	}
 	String FirstName;
 	String LastName;
 	String ContactNumber;
@@ -102,7 +112,37 @@ public class UserLoginPOJO {
 		DateOfBirth = dateOfBirth;
 	}
 	
-	
+	public String getFileId() {
+		return fileId;
+	}
+	public void setFileId(String fileId) {
+		this.fileId = fileId;
+	}
+	public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
 
+	public String getPatientRoleEmail() {
+		return patientRoleEmail;
+	}
+	public void setPatientRoleEmail(String patientRoleEmail) {
+		this.patientRoleEmail = patientRoleEmail;
+	}
+	public String getPatientpassword() {
+		return patientpassword;
+	}
+	public void setPatientpassword(String patientpassword) {
+		this.patientpassword = patientpassword;
+	}
+	public String getPatinetEmail() {
+		return patinetEmail;
+	}
+	public void setPatinetEmail(String patinetEmail) {
+		this.patinetEmail = patinetEmail;
+	}
+	
 
 }
