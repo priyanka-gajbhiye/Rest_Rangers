@@ -69,8 +69,8 @@ public class PatientControllerRequest extends RestUtils{
 			    request.header("Content-Type", "multipart/form-data; boundary=<calculated when request is sent>");
 			
 			request.then().log().all();
-			System.out.println("PUT URL"+url_endpoints.getString("postpatientcontroller")+"/"+UserLoginPOJO.getPatientId());
-			response = request.when().put(url_endpoints.getString("postpatientcontroller")+"/"+UserLoginPOJO.getPatientId()).andReturn();
+			System.out.println("PUT URL"+url_endpoints.getString("patientcontroller")+"/"+UserLoginPOJO.getPatientId());
+			response = request.when().put(url_endpoints.getString("patientcontroller")+"/"+UserLoginPOJO.getPatientId()).andReturn();
 			
 			response.then().log().all();
 			

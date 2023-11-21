@@ -56,10 +56,9 @@ public class PatientControllerSD extends RestUtils{
 	public void user_sends_HTTPS_request_for_New_Patient() throws IOException {
 		PatientControllerRequest.PostRequest();
 		UserLoginPOJO.setPatientId(response.path("patientId"));
-		UserLoginPOJO.setFileId(response.path("fileId"));
-	
+		
 		System.out.println("New PatientID"+UserLoginPOJO.getPatientId());
-		System.out.println("New FileID"+UserLoginPOJO.getFileId());
+		//System.out.println("New FileID"+UserLoginPOJO.getFileId());
 		
 	}
 
@@ -124,6 +123,7 @@ public void user_creates_GET_request_for_patient_morbidity_by_patientID() {
 @When("user sends request for patient morbidity and request body by patient ID")
 public void user_sends_request_for_patient_morbidity_and_request_body_by_patient_ID() {
 	PatientControllerRequest.GetRequest();
+	UserLoginPOJO.setFileId(response.path("fileId"));
 	
 }
 
