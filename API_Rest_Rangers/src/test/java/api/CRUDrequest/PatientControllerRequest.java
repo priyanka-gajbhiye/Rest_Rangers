@@ -1,7 +1,6 @@
 package api.CRUDrequest;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.File;
 
 import org.json.JSONObject;
 
@@ -16,17 +15,18 @@ import io.restassured.specification.RequestSpecification;
 import static io.restassured.config.EncoderConfig.encoderConfig;
 
 public class PatientControllerRequest extends RestUtils{
-	
+	 
+	   
 	public static Response PostRequest() {	    
 		String patientInfo = newPatient.getString("patientInfo");
-   
+		File file = new File("./src/test/resources/ReportsFiles/HypoThyroid-Report.pdf.pdf");
     
     System.out.println("formData Values" + patientInfo);
 
 		try {
 			
 			RequestSpecification request = RestAssured.given();
-			
+			    request.multiPart("file", file);
 				request.multiPart("patientInfo",patientInfo);
 					//body(new JSONObject(formData));
                 request.header("Accept","*/*");
@@ -37,7 +37,7 @@ public class PatientControllerRequest extends RestUtils{
 			
 			request.then().log().all();
 			
-			response = request.when().post(url_endpoints.getString("postpatientcontroller")).andReturn();
+			response = request.when().post(url_endpoints.getString("patientcontroller")).andReturn();
 			
 			response.then().log().all();
 			
@@ -48,16 +48,18 @@ public class PatientControllerRequest extends RestUtils{
 		return response;
 	}
 	
+	
 	public static Response PutRequest() {	    
 		String patientInfo = updatePatient.getString("patientInfo");
+		File file = new File("./src/test/resources/ReportsFiles/HypoThyroid-Report.pdf.pdf");
    
     
     System.out.println("formData Values" + patientInfo);
-    // String putURL = url_endpoints.getString("postpatientcontroller")+"/"+UserLoginPOJO.getPatientId();
+    
 		try {
 			
 			RequestSpecification request = RestAssured.given();
-			
+			request.multiPart("file", file);
 				request.multiPart("patientInfo",patientInfo);
 					//body(new JSONObject(formData));
                 request.header("Accept","*/*");
@@ -78,6 +80,59 @@ public class PatientControllerRequest extends RestUtils{
 
 		return response;
 	}
+	
+	public static Response GetAllPatient() {	    
+		   
+	    
+		   try {
+					
+					RequestSpecification request = RestAssured.given();
+				    request.header("Authorization", UserLoginPOJO.getToken());
+					request.then().log().all();
+					response = request.when().get(url_endpoints.getString("patientcontroller"));
+					response.then().log().all();
+					
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				return response;
+			}
+	public static Response GetRequest() {	    
+   
+    
+   try {
+			
+			RequestSpecification request = RestAssured.given();
+		    request.header("Authorization", UserLoginPOJO.getToken());
+			request.then().log().all();
+			response = request.when().get(url_endpoints.getString("getpatientcontroller")+"/"+UserLoginPOJO.getPatientId()).andReturn();
+			response.then().log().all();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return response;
+	}
+	public static Response GetRequestfileID() {	    
+	    
+		   try {
+					
+					RequestSpecification request = RestAssured.given();
+				        request.header("Authorization", UserLoginPOJO.getToken());
+					    
+					request.then().log().all();
+					response = request.when().get(url_endpoints.getString("getbyfileID")+"/"+UserLoginPOJO.getFileId()).andReturn();
+					
+					response.then().log().all();
+					
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				return response;
+			}
 
 	public static Response DeleteRequest() {	    
 		

@@ -38,8 +38,11 @@ public class RestUtils {
 		
 	// Patient schema path
 		public static File Patientjson = xlutils.getJSONFile(path.getString("PatientSchemajson"));
+		public static File MorbiditySchema = xlutils.getJSONFile(path.getString("MorbiditySchemajson"));
 		
 		
+		public static File ReportFile = xlutils.getReportFile(path.getString("PDFpath"));
+			
 
 
 }
